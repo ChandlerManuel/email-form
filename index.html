@@ -3,163 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chandler Manuel | Design & Development</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Chandler Manuel | Design Studio</title>
   <style>
-    /* === MODERN, BOLD DESIGN (MATCHES YOUR IMAGES) === */
+    /* MAIN STRUCTURE */
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #000000;
-      text-align: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.5;
+      background: 
+        linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)),
+        url('YOUR-BACKGROUND-IMAGE.jpg') center/cover no-repeat fixed;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      color: #333;
     }
 
     .container {
-      max-width: 600px;
-      padding: 40px;
-      transition: all 0.5s ease;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      text-align: center;
     }
 
-    /* Landing Page Styling */
-    #landing h1 {
-      font-size: 36px;
+    /* LOGO STYLING */
+    .logo {
+      width: 120px; /* Adjust based on your logo */
+      margin-bottom: 40px;
+    }
+
+    /* TYPOGRAPHY */
+    h1 {
+      font-size: 2.8rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+      margin: 20px 0;
+      color: #000;
     }
 
-    #landing h2 {
-      font-size: 24px;
+    h2 {
+      font-size: 1.8rem;
       font-weight: 400;
       margin-bottom: 30px;
+      line-height: 1.4;
     }
 
-    #landing p {
-      font-size: 18px;
-      margin-bottom: 10px;
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
     }
 
-    #cta-button {
-      background: #000000;
-      color: #ffffff;
+    /* FORM ELEMENTS */
+    .form-container {
+      background: white;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      display: none; /* Hidden initially */
+    }
+
+    .input-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
       border: none;
       padding: 15px 40px;
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 1rem;
+      margin: 20px 0;
       cursor: pointer;
-      border-radius: 0;
-      margin-top: 30px;
       transition: all 0.3s;
     }
 
-    #cta-button:hover {
-      opacity: 0.9;
-    }
-
-    /* Form Styling (Hidden Initially) */
-    #form-container {
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      transition: all 0.5s ease;
-    }
-
-    #form-container.active {
-      opacity: 1;
-      height: auto;
-    }
-
-    #form-container h2 {
-      font-size: 24px;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-
-    #form-container p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    #form-container strong {
-      font-weight: 700;
-    }
-
-    form input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #000000;
-      font-size: 16px;
-    }
-
-    form button {
-      background: #000000;
-      color: #ffffff;
-      border: none;
-      padding: 15px 40px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    .disclaimer {
-      font-size: 12px;
-      color: #777777;
-      margin-top: 30px;
-      line-height: 1.4;
+    /* VISUAL DETAILS */
+    .divider {
+      height: 1px;
+      width: 100px;
+      background: #ddd;
+      margin: 40px auto;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Landing Page -->
-    <header id="landing">
+    <!-- Logo -->
+    <img src="YOUR-LOGO.png" alt="Chandler Manuel Logo" class="logo">
+
+    <!-- Landing Content -->
+    <div id="landing">
       <h1>CHANDLER MANUEL</h1>
-      <h2>YOUR DREAM PROJECT STARTS HERE!</h2>
+      <h2>YOUR DREAM PROJECT<br>STARTS HERE!</h2>
       <p>I help you turn ideas into stunning designs.</p>
       <p>Let's build something incredible together!</p>
+      <div class="divider"></div>
       <button id="cta-button">CLICK HERE TO GET STARTED</button>
-    </header>
+    </div>
 
-    <!-- Form (Hidden Until Button Click) -->
-    <div id="form-container">
+    <!-- Form Content -->
+    <div id="form-container" class="form-container">
       <h2>YOUR DREAM PROJECT STARTS HERE!</h2>
       <p>You're on the right track! Just one step away from bringing your vision to life.</p>
       <p><strong>Let's do this!</strong></p>
-      <form action="https://formsubmit.co/w.chandler.manuel@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Name:" required>
-        <input type="email" name="email" placeholder="Email:" required>
+      
+      <form action="https://formsubmit.co/your@email.com" method="POST">
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
         <button type="submit">Done!</button>
       </form>
-      <p class="disclaimer">We respect your privacy. Your information will never be shared or sold—only used to connect with you about your project.</p>
+      
+      <p class="disclaimer">We respect your privacy. Your information will never be shared.</p>
     </div>
   </div>
 
   <script>
-    // Morph Animation: Landing → Form
-    const ctaButton = document.getElementById("cta-button");
-    const landing = document.getElementById("landing");
-    const formContainer = document.getElementById("form-container");
-
-    ctaButton.addEventListener("click", () => {
-      landing.style.opacity = "0";
-      landing.style.height = "0";
-      landing.style.margin = "0";
-      landing.style.padding = "0";
-      landing.style.overflow = "hidden";
-
-      setTimeout(() => {
-        formContainer.classList.add("active");
-      }, 300);
+    document.getElementById('cta-button').addEventListener('click', function() {
+      document.getElementById('landing').style.display = 'none';
+      document.getElementById('form-container').style.display = 'block';
     });
   </script>
 </body>
