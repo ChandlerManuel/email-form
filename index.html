@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandler Manuel | Design & Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* === MODERN, BOLD DESIGN (MATCHES YOUR IMAGES) === */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #ffffff;
+      color: #000000;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 40px;
+      transition: all 0.5s ease;
+    }
+
+    /* Landing Page Styling */
+    #landing h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    #landing h2 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    #landing p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #cta-button {
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 0;
+      margin-top: 30px;
+      transition: all 0.3s;
+    }
+
+    #cta-button:hover {
+      opacity: 0.9;
+    }
+
+    /* Form Styling (Hidden Initially) */
+    #form-container {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    #form-container.active {
+      opacity: 1;
+      height: auto;
+    }
+
+    #form-container h2 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    #form-container p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    #form-container strong {
+      font-weight: 700;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #000000;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: #777777;
+      margin-top: 30px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Landing Page -->
+    <header id="landing">
+      <h1>CHANDLER MANUEL</h1>
+      <h2>YOUR DREAM PROJECT STARTS HERE!</h2>
+      <p>I help you turn ideas into stunning designs.</p>
+      <p>Let's build something incredible together!</p>
+      <button id="cta-button">CLICK HERE TO GET STARTED</button>
+    </header>
+
+    <!-- Form (Hidden Until Button Click) -->
+    <div id="form-container">
+      <h2>YOUR DREAM PROJECT STARTS HERE!</h2>
+      <p>You're on the right track! Just one step away from bringing your vision to life.</p>
+      <p><strong>Let's do this!</strong></p>
+      <form action="https://formsubmit.co/w.chandler.manuel@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Name:" required>
+        <input type="email" name="email" placeholder="Email:" required>
+        <button type="submit">Done!</button>
+      </form>
+      <p class="disclaimer">We respect your privacy. Your information will never be shared or sold—only used to connect with you about your project.</p>
+    </div>
+  </div>
+
+  <script>
+    // Morph Animation: Landing → Form
+    const ctaButton = document.getElementById("cta-button");
+    const landing = document.getElementById("landing");
+    const formContainer = document.getElementById("form-container");
+
+    ctaButton.addEventListener("click", () => {
+      landing.style.opacity = "0";
+      landing.style.height = "0";
+      landing.style.margin = "0";
+      landing.style.padding = "0";
+      landing.style.overflow = "hidden";
+
+      setTimeout(() => {
+        formContainer.classList.add("active");
+      }, 300);
+    });
+  </script>
+</body>
+</html>
